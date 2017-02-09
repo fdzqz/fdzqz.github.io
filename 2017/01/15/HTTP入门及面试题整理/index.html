@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -84,16 +84,37 @@
 
 
 
-<meta name="description" content="无知会产生恐惧 已知会产生无趣">
+<meta name="description" content="面试要点HTTP method：解释下每个方法的功能。
+从浏览器地址栏输入url到显示页面的步骤
+输入URL
+
+查看缓存 i. 如果资源未缓存，发送新请求ii. 如果已缓存，检验是否新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证iii. 检验新鲜有两个HTTP头进行控制Expires和Cache-Control：
+
+HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期
+HTTP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP入门及面试题整理">
 <meta property="og:url" content="http://yoursite.com/2017/01/15/HTTP入门及面试题整理/index.html">
 <meta property="og:site_name" content="FDZQZZ">
-<meta property="og:description" content="无知会产生恐惧 已知会产生无趣">
-<meta property="og:updated_time" content="2017-01-15T10:21:14.502Z">
+<meta property="og:description" content="面试要点HTTP method：解释下每个方法的功能。
+从浏览器地址栏输入url到显示页面的步骤
+输入URL
+
+查看缓存 i. 如果资源未缓存，发送新请求ii. 如果已缓存，检验是否新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证iii. 检验新鲜有两个HTTP头进行控制Expires和Cache-Control：
+
+HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期
+HTTP">
+<meta property="og:updated_time" content="2017-01-15T12:53:51.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP入门及面试题整理">
-<meta name="twitter:description" content="无知会产生恐惧 已知会产生无趣">
+<meta name="twitter:description" content="面试要点HTTP method：解释下每个方法的功能。
+从浏览器地址栏输入url到显示页面的步骤
+输入URL
+
+查看缓存 i. 如果资源未缓存，发送新请求ii. 如果已缓存，检验是否新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证iii. 检验新鲜有两个HTTP头进行控制Expires和Cache-Control：
+
+HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期
+HTTP">
 
 
 
@@ -325,7 +346,21 @@
       
 
       
-        
+        <h2 id="面试要点"><a href="#面试要点" class="headerlink" title="面试要点"></a>面试要点</h2><h3 id="HTTP-method"><a href="#HTTP-method" class="headerlink" title="HTTP method"></a>HTTP method</h3><p>：解释下每个方法的功能。</p>
+<h3 id="从浏览器地址栏输入url到显示页面的步骤"><a href="#从浏览器地址栏输入url到显示页面的步骤" class="headerlink" title="从浏览器地址栏输入url到显示页面的步骤"></a>从浏览器地址栏输入url到显示页面的步骤</h3><ol>
+<li><p>输入URL</p>
+</li>
+<li><p>查看缓存<br> i. 如果资源未缓存，发送新请求<br>ii. 如果已缓存，检验是否新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证<br>iii. 检验新鲜有两个HTTP头进行控制Expires和Cache-Control：</p>
+<ul>
+<li>HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期</li>
+<li>HTTP1.1增加了Cache-Control: max-age=,值为以秒为单位的最大新鲜时间</li>
+</ul>
+</li>
+<li><p>浏览器解析URL获取协议、主机、端口和path</p>
+</li>
+<li>浏览器组装</li>
+</ol>
+
       
     </div>
 
@@ -345,6 +380,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+          
+        </div>
       
 
       
@@ -414,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -428,7 +478,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -439,7 +489,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -464,6 +514,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面试要点"><span class="nav-number">1.</span> <span class="nav-text">面试要点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-method"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从浏览器地址栏输入url到显示页面的步骤"><span class="nav-number">1.2.</span> <span class="nav-text">从浏览器地址栏输入url到显示页面的步骤</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

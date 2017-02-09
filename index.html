@@ -467,15 +467,15 @@
 <li>外部文件。</li>
 </ul>
 <h3 id="1-1-事件句柄"><a href="#1-1-事件句柄" class="headerlink" title="1.1 事件句柄"></a>1.1 事件句柄</h3><p>我们可以使用事件句柄（如onclick）为一个HTML元素注册事件，它是通过HTML元素属性的方式实现的，如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=<span class="string">'alert('</span>我是一个按钮！<span class="string">');'</span>&gt;&lt;/button&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;alert(&apos;我是一个按钮！&apos;);&quot;&gt;&lt;/button&gt;</div></pre></td></tr></table></figure>
 <h3 id="1-2-嵌入代码"><a href="#1-2-嵌入代码" class="headerlink" title="1.2 嵌入代码"></a>1.2 嵌入代码</h3><p>另外，还可以直接在 <script> 标签里面直接写js代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    alert(a); </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    var a = 1;</div><div class="line">    alert(a); </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h3 id="1-3-外部文件"><a href="#1-3-外部文件" class="headerlink" title="1.3 外部文件"></a>1.3 外部文件</h3><p>还可以用外部文件的方式来引入js文件，这种方式最常用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">'a.js'</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&apos;a.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h2 id="2-浏览器对于js外部文件的三种打开方式"><a href="#2-浏览器对于js外部文件的三种打开方式" class="headerlink" title="2 浏览器对于js外部文件的三种打开方式"></a>2 浏览器对于js外部文件的三种打开方式</h2><p>在HTML通过 <script> 元素来引入js外部文件，script标签有defer和async两个属性，对于不同的属性设置，浏览器对于js脚本的处理方式是不一样的：</p>
-<h3 id="2-1-没有defer和async"><a href="#2-1-没有defer和async" class="headerlink" title="2.1 没有defer和async"></a>2.1 没有defer和async</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">'a.js'</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-1-没有defer和async"><a href="#2-1-没有defer和async" class="headerlink" title="2.1 没有defer和async"></a>2.1 没有defer和async</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&apos;a.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>这时，浏览器会立即下载并执行指定的脚本，立即指在加载和渲染该 <script> 元素后面的文档元素之前。</p>
-<h3 id="2-2-defer属性"><a href="#2-2-defer属性" class="headerlink" title="2.2 defer属性"></a>2.2 defer属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script defer src=<span class="string">'a.js'</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-2-defer属性"><a href="#2-2-defer属性" class="headerlink" title="2.2 defer属性"></a>2.2 defer属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script defer src=&apos;a.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>有defer时，加载后续文档元素的过程将和 a.js 的加载并行进行（异步），但是 a.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。</p>
 <p>备注1：load 事件和 DOMContentLoaded 事件间的不同</p>
 <ul>
@@ -488,7 +488,7 @@
 <li>加载图片等外部文件。</li>
 <li>页面加载完毕。（load事件被触发）</li>
 </ul>
-<h3 id="2-3-async属性"><a href="#2-3-async属性" class="headerlink" title="2.3 async属性"></a>2.3 async属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script defer src=<span class="string">'a.js'</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-3-async属性"><a href="#2-3-async属性" class="headerlink" title="2.3 async属性"></a>2.3 async属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script defer src=&apos;a.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>加载和渲染后续文档元素的过程将和 a.js 的加载与执行并行进行（异步）。（但是加载完后的js文件的执行时间具有不确定性）</p>
 <p><img src="https://sfault-image.b0.upaiyun.com/28/4a/284aec5bb7f16b3ef4e7482110c5ddbb_articlex" alt=""></p>
 <h2 id="3-相关性能问题"><a href="#3-相关性能问题" class="headerlink" title="3 相关性能问题"></a>3 相关性能问题</h2><p>大多数浏览器是使用单一线程（UI线程）来处理用户界面和执行js脚本的，因此，当js代码在执行时就可能出现页面渲染和用户交互完全被阻塞的问题（如形成白屏），下面是针对该类问题的一些解决方案。</p>

@@ -107,7 +107,7 @@
 1&amp;lt;button onclick=&quot;alert(&apos;我是一个按钮！&apos;);&quot;&amp;gt;&amp;lt;/button&amp;gt;
 1.2 嵌入代码另">
 <meta property="og:image" content="https://sfault-image.b0.upaiyun.com/28/4a/284aec5bb7f16b3ef4e7482110c5ddbb_articlex">
-<meta property="og:updated_time" content="2017-02-09T12:18:34.852Z">
+<meta property="og:updated_time" content="2017-02-09T12:22:42.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在HTML中使用JavaScript">
 <meta name="twitter:description" content="1 如何在HTML使用JavaScript在HTML中使用JavaScript主要有三种方法：
@@ -359,7 +359,8 @@
 </ul>
 <h3 id="1-1-事件句柄"><a href="#1-1-事件句柄" class="headerlink" title="1.1 事件句柄"></a>1.1 事件句柄</h3><p>我们可以使用事件句柄（如onclick）为一个HTML元素注册事件，它是通过HTML元素属性的方式实现的，如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=<span class="string">"alert('我是一个按钮！');"</span>&gt;&lt;/button&gt;</div></pre></td></tr></table></figure>
-<h3 id="1-2-嵌入代码"><a href="#1-2-嵌入代码" class="headerlink" title="1.2 嵌入代码"></a>1.2 嵌入代码</h3><p>另外，还可以直接在<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```javascript</div><div class="line">&lt;script&gt;</div><div class="line">    var a = 1;</div><div class="line">    alert(a); </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="1-2-嵌入代码"><a href="#1-2-嵌入代码" class="headerlink" title="1.2 嵌入代码"></a>1.2 嵌入代码</h3><p>另外，还可以直接在 script 标签里面直接写js代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    alert(a); </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h3 id="1-3-外部文件"><a href="#1-3-外部文件" class="headerlink" title="1.3 外部文件"></a>1.3 外部文件</h3><p>还可以用外部文件的方式来引入js文件，这种方式最常用：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">'a.js'</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h2 id="2-浏览器对于js外部文件的三种打开方式"><a href="#2-浏览器对于js外部文件的三种打开方式" class="headerlink" title="2 浏览器对于js外部文件的三种打开方式"></a>2 浏览器对于js外部文件的三种打开方式</h2><p>在HTML通过 script 元素来引入js外部文件，<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 2.1 没有defer和async</div><div class="line">```javascript</div><div class="line">&lt;script src=&apos;a.js&apos;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
